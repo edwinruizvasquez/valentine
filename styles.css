@@ -193,7 +193,7 @@ body {
 .hearts-overlay {
   position: fixed;
   inset: 0;
-  background-image: url("assets/heartsfalling.gif");
+  background-image: url("heartsfalling.gif");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
