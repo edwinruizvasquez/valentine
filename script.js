@@ -93,3 +93,14 @@ if (slideshow) {
     }, 2000);
   }
 }
+
+const bgAudio = document.getElementById("bgAudio");
+if (bgAudio) {
+  const tryPlay = () => {
+    bgAudio.muted = false;
+    bgAudio.play().catch(() => {});
+  };
+  bgAudio.play().catch(() => {});
+  document.addEventListener("click", tryPlay, { once: true });
+  document.addEventListener("touchstart", tryPlay, { once: true });
+}
