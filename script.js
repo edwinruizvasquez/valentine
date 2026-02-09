@@ -98,9 +98,12 @@ const bgAudio = document.getElementById("bgAudio");
 if (bgAudio) {
   const tryPlay = () => {
     bgAudio.muted = false;
+    bgAudio.currentTime = 0;
     bgAudio.play().catch(() => {});
   };
-  bgAudio.play().catch(() => {});
-  document.addEventListener("click", tryPlay, { once: true });
-  document.addEventListener("touchstart", tryPlay, { once: true });
+  document.AddEventListener("pointerdown", tryPlay, { once: true});
+  document.AddEventListener("touchstart", tryPlay, { once: true});
+  document.AddEventListener("click", tryPlay, { once: true});
+  document.AddEventListener("keydown", tryPlay, { once: true});
+
 }
